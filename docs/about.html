@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teeth Fix - About</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #3399D9 0%, #4DCCD9 100%);
+            color: #FFFFFF;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.97);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            color: #264059;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #3399D9;
+        }
+
+        .logo {
+            font-size: 3rem;
+            font-weight: bold;
+            background: linear-gradient(135deg, #3399D9 0%, #4DCCD9 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            color: #64748b;
+            margin-bottom: 20px;
+        }
+
+        .version-info {
+            background: linear-gradient(135deg, rgba(51, 153, 217, 0.1) 0%, rgba(77, 204, 217, 0.1) 100%);
+            border: 1px solid rgba(51, 153, 217, 0.3);
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .version-number {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #3399D9;
+            margin-bottom: 5px;
+        }
+
+        .build-info {
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+
+        h1 {
+            color: #264059;
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+        }
+
+        h2 {
+            color: #264059;
+            margin: 30px 0 15px 0;
+            font-size: 1.8rem;
+            border-left: 4px solid #3399D9;
+            padding-left: 15px;
+        }
+
+        h3 {
+            color: #264059;
+            margin: 20px 0 10px 0;
+            font-size: 1.3rem;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+            color: #264059;
+        }
+
+        ul {
+            margin: 15px 0;
+            padding-left: 30px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            color: #264059;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .feature-card {
+            background: linear-gradient(135deg, rgba(51, 153, 217, 0.1) 0%, rgba(77, 204, 217, 0.1) 100%);
+            border: 1px solid rgba(51, 153, 217, 0.2);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(51, 153, 217, 0.3);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .feature-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #264059;
+            margin-bottom: 10px;
+        }
+
+        .feature-description {
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+
+        .developer-section {
+            background: linear-gradient(135deg, rgba(51, 153, 217, 0.1) 0%, rgba(77, 204, 217, 0.1) 100%);
+            border: 1px solid rgba(51, 153, 217, 0.3);
+            border-radius: 15px;
+            padding: 25px;
+            margin-top: 40px;
+        }
+
+        .developer-info {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .developer-name {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #264059;
+            margin-bottom: 10px;
+        }
+
+        .developer-title {
+            font-size: 1.1rem;
+            color: #64748b;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            background: linear-gradient(135deg, rgba(51, 153, 217, 0.1) 0%, rgba(77, 204, 217, 0.1) 100%);
+            border: 1px solid rgba(51, 153, 217, 0.3);
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .contact-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #264059;
+            margin-bottom: 15px;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .contact-link {
+            color: #FFFFFF;
+            text-decoration: none;
+            padding: 8px 16px;
+            background: linear-gradient(135deg, #3399D9 0%, #4DCCD9 100%);
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(51, 153, 217, 0.4);
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(51, 153, 217, 0.3);
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+                margin: 10px;
+            }
+            
+            .logo {
+                font-size: 2.5rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-links {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">Teeth Fix</div>
+            <div class="tagline">Preview your smile—align, whiten, and fix teeth with AI.</div>
+            
+            <div class="version-info">
+                <div class="version-number">Version 1.0.0</div>
+                <div class="build-info">Build 1.0.0 (2026)</div>
+            </div>
+        </div>
+
+        <h1>About Teeth Fix</h1>
+        
+        <p>Teeth Fix is an iOS app that helps you visualize dental-style enhancements on your own photos using artificial intelligence. Upload a selfie or portrait, choose a treatment type (alignment, braces removal, whitening, or an all-in-one enhancement), and get a photorealistic preview—without replacing professional dental care.</p>
+
+        <h2>🌟 Key Features</h2>
+        
+        <div class="feature-grid">
+            <div class="feature-card">
+                <span class="feature-icon">🦷</span>
+                <div class="feature-title">Treatment types</div>
+                <div class="feature-description">Teeth alignment, remove braces, whitening, or combined enhancement</div>
+            </div>
+            
+            <div class="feature-card">
+                <span class="feature-icon">📸</span>
+                <div class="feature-title">HD export</div>
+                <div class="feature-description">Save and share your results in high resolution</div>
+            </div>
+            
+            <div class="feature-card">
+                <span class="feature-icon">⚡</span>
+                <div class="feature-title">Fast processing</div>
+                <div class="feature-description">Optimized AI pipeline for quick previews</div>
+            </div>
+            
+            <div class="feature-card">
+                <span class="feature-icon">🎨</span>
+                <div class="feature-title">Compare options</div>
+                <div class="feature-description">Switch treatments before you generate to explore different looks</div>
+            </div>
+            
+            <div class="feature-card">
+                <span class="feature-icon">💾</span>
+                <div class="feature-title">Process history</div>
+                <div class="feature-description">Revisit past results stored on your device</div>
+            </div>
+            
+            <div class="feature-card">
+                <span class="feature-icon">🔒</span>
+                <div class="feature-title">Privacy first</div>
+                <div class="feature-description">Your photos are processed securely; results are kept on your device</div>
+            </div>
+        </div>
+
+        <h2>🎯 How It Works</h2>
+        
+        <p>Teeth Fix keeps the flow simple:</p>
+        <ol>
+            <li><strong>Upload a photo:</strong> From your library or camera (selfie or portrait works)</li>
+            <li><strong>Pick a treatment:</strong> Alignment, remove braces, whitening, or all</li>
+            <li><strong>Generate:</strong> AI applies your chosen enhancement</li>
+            <li><strong>Unlock result:</strong> Use credits to view your finished image</li>
+            <li><strong>Save &amp; share:</strong> Export to Photos or share</li>
+        </ol>
+
+        <h2>💳 Credit System</h2>
+        
+        <p>Teeth Fix uses credits to unlock generated results:</p>
+        <ul>
+            <li><strong>Haftalık Starter:</strong> 15 Credits - $4.99 (1 Week)</li>
+            <li><strong>Aylık Pro:</strong> 75 Credits - $14.99 (1 Month) - Most Popular</li>
+            <li><strong>Aylık Elite:</strong> 200 Credits - $29.99 (1 Month)</li>
+        </ul>
+        <p>Each generation costs 1 credit. Credits are only deducted when you successfully unlock a result.</p>
+
+        <div class="developer-section">
+            <div class="developer-info">
+                <div class="developer-name">Powered by exlinetr</div>
+                <div class="developer-title">Innovative AI Solutions</div>
+            </div>
+
+            <div class="contact-info">
+                <div class="contact-title">📧 Get In Touch</div>
+                <div class="contact-links">
+                    <a href="mailto:teethfix.support@exlinetr.com" class="contact-link">Email Support</a>
+                    <a href="https://exlinetr.com" class="contact-link">Visit Website</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>© 2026 Teeth Fix. All rights reserved.</p>
+            <p>Made with ❤️ and AI by exlinetr</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,5 +1,5 @@
 {
   "app_Version":1.2,
-  "force_update":false,
+  "force_update":true,
   "onboard_sub":true
 }
